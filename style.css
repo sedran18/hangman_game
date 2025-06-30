@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:"Press Start 2P", system-ui;
 }
 @media (max-width: 600px) {
   .botoes {
@@ -20,6 +21,8 @@ header {
     text-transform: uppercase;
     position: sticky;
     top: 0px;
+    z-index: 1;
+
 }
 header a{
     height: 80%;
@@ -40,10 +43,31 @@ main {
     background: #3c096c;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5px 8%;
+    position: relative;
+
 }
-main img {
-    height: 80%;
+.part2{
+    display: flex;
+    align-items: bottom;
+    padding-top: 4%;
+    height: 75%;
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.part2 img {
+    height: 100%;
+}
+.child {
+    position: absolute;
+    top: 15px;
+    right:50px;
+    color: gold;
+    i {
+        font-size: 2rem;
+    }
 }
 .options {   
     height: 75%;
@@ -64,7 +88,6 @@ main img {
     border-radius: 10px;
     font-size: 1.3rem;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif ;
     }
     a:hover {
         transform: scale(1.087);
@@ -72,7 +95,10 @@ main img {
 
 }
 footer {
-    height: 25vh;
+    padding: 30px;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    height: 35%;
     background: #10002b;
     display: flex;
     justify-content: space-around;
@@ -81,7 +107,7 @@ footer {
 
     .texto {
         height: 90%;
-        width: 40%;
+        width: 45%;
         padding: 10px;
     }
 
