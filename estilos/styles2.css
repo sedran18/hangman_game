@@ -1,8 +1,8 @@
 .main2 {
     width: 100%;
     background: #3c096c;
-    padding: 3%;
     display: grid;
+    padding: 3vh 4vw;
     grid-template-rows: 5% 50% 10% 30%;
 
 }
@@ -16,14 +16,9 @@
 .cima {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 3%;
-    padding: 2%;
-}
-.wrongboard {
-    justify-self: end;
-    width: 25%;
-    background: white;
+    justify-content: center;
+    padding: 1%;
+    margin-bottom: 3px;
 }
 .word {
     color: yellow;
@@ -31,4 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
+
 }
