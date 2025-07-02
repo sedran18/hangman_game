@@ -58,7 +58,9 @@
     gap: 10px;
     align-items: center;
 }
-
+#fila3 button{
+    padding: 10%;
+}
 
 .teclado button {
     padding: 7%;
@@ -68,13 +70,7 @@
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
-.espaço {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
-    height: 3.8vh;
-}
+
 
 .teclado button:hover {
     background-color: #f18f1f;
