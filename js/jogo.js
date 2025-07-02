@@ -43,7 +43,7 @@ function atualizarPalavra(letra) {
         if (randomWord[i] === letra) {
             novaExibicao += letra;
             certoRound = true;
-            certoRound++;
+            certo++;
         } else {
             novaExibicao += exibicao[i];
         }
