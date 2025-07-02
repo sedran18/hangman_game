@@ -29,3 +29,26 @@
     font-size: 2rem;
 
 }
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 8px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.teclado button {
+    padding: 10px;
+    border: none;
+    background-color: #f20089;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.teclado button:hover {
+    background-color: #f18f1f;
+    transform: scale(1.1);
+}
