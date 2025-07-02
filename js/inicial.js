@@ -12,7 +12,7 @@ const frutas = document.getElementById('frutas');
 
 frutas.addEventListener('click', () => {
     event.preventDefault();
-    arrPrincipal = ['MACA', 'BANANA', 'MORANGO', 'LIMAO', 'KIWI', 'MORANGO'];
+    arrPrincipal = ['MAÇA', 'BANANA', 'MORANGO', 'LIMAO', 'KIWI', 'MORANGO'];
     localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
     window.location.href = 'jogo.html';
 })

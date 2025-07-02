@@ -83,7 +83,9 @@
     font-size: 0.6rem;
     word-break: break-word;
 }
-
+#fila3 button{
+    padding: 3%;
+}
 
 .child2 i {
     font-size: 1rem;
@@ -96,7 +98,5 @@
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
-.espaço {
-    width: 30vw;
-}
+
 }
