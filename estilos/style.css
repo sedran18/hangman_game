@@ -4,11 +4,7 @@
     box-sizing: border-box;
     font-family:"Press Start 2P", system-ui;
 }
-@media (max-width: 600px) {
-  .botoes {
-    width: 80%;
-  }
-}
+
 header {
     width: 100%;
     height: 15vh;
@@ -54,18 +50,17 @@ h1 {
     padding: 3%;
     height: 75%;
     width: 50%;
-    font-size: 1.2rem;
     text-align: left;
 }
-.part2 img {
-    width: 100%;
-}
+
+
 .child {
     position: absolute;
     top: 15px;
     right:50px;
     color: gold;
 }
+
 .child i {
     font-size: 2rem;
 }
@@ -79,7 +74,7 @@ h1 {
     align-content: center;
 
 }
-.options a:link, a:visited {
+.options a:link,.options a:visited {
     text-decoration: none;
     display: flex; 
     align-items: center;
@@ -87,9 +82,11 @@ h1 {
     background: #f20089;
     color: white;
     border-radius: 10px;
-    font-size: 1.3rem;
+    font-size: clamp(0.5rem, 4vh, 1.3rem);
     text-transform: uppercase;
 }
+
+
 .options a:hover {
     transform: scale(1.087);
 }
@@ -125,7 +122,7 @@ footer  i {
 }
 .main3 input {
     height: 15%;
-    width: 40%;
+    width: 60%;
     border-radius: 10px;
     font-size: 1.2rem;
     padding: 3%;
@@ -144,4 +141,178 @@ footer  i {
     color: white;
     font-size: 2rem;
     margin: 3%;
+}
+@media (max-width: 661px) {
+    .main1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+    }
+
+    .child {
+        position: static;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .options {
+        height: 90vh;
+        margin-top: 10px;
+        width: 90%;
+        gap: 15px;
+    }
+    .options a:link, .options a:visited {
+        font-size: 0.8rem;
+    }
+
+    .part2 {
+        display: block;
+        width: 60%;
+    }
+
+    .part2 img {
+        width: 100%;
+        height: auto;
+    }
+    #child {
+        font-size: 0.6rem;
+    }
+    .child i {
+        font-size: 0.8rem;
+    }
+    footer {
+    padding: 30px;
+    font-size: 0.4rem;
+    line-height: 1.5rem;
+    height: 35%;
+    background: #10002b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+}
+footer .texto {
+    height: 95%;
+    width: 90%;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+footer  i {
+    font-size: 4.4rem;
+    color: white;
+    background: #0077B5;
+    padding: 15px;
+    }
+    .main3 {
+        height: 90vh;
+}
+    .main3 button {
+        height: 10%;
+        width: 30vw;
+    }
+    .main3 p {
+        color: white;
+        font-size: 0.5rem;
+        margin: 3%;
+    }
+    .main3 input {
+        width: 70vw;
+        font-size: 0.5rem;
+    }
+}
+
+
+@media (min-width:661px) and (max-width: 670px) {
+    .options a:link, .options a:visited {
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: #f20089;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+    .main1 {
+        width: 100%;
+        height: 90vh;
+        background: #3c096c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 8%;
+        position: relative;
+
+    }
+    .child {
+        line-height: 10px;
+        position: absolute;
+        top: 25px;
+        color: gold;
+        font-size: 1rem;
+
+    }
+    .child i {
+        font-size: 1.3rem;
+    }
+    .main3 {
+        height: 90vh;
+}
+    .main3 button {
+        height: 10%;
+        width: 30vw;
+    }
+    .main3 p {
+        color: white;
+        font-size: 0.7rem;
+        margin: 3%;
+    }
+    .main3 input {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+@media ((min-width:670px) and (max-width: 1067px)){
+    footer {
+    padding: 2%;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    height: 35%;
+    background: #10002b;
+    color: white;
+}
+    .options {   
+        height: 75%;
+        width: 60%;
+        display: grid;
+        grid-template-rows: repeat(4, 20%);
+        grid-template-columns: 100%;
+        gap: 25px;
+        align-content: center;
+        
+}
+    .main3 {
+        height: 90vh;
+}
+    .main3 button {
+        height: 10%;
+        width: 35vw;
+}
+    .main3 p {
+        color: white;
+        font-size: 1.3rem;
+        margin: 3%;
+}
+    .main3 input {
+        font-size: 0.8rem;
+}
+
 }

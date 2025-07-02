@@ -22,18 +22,27 @@ for (let i=0;  (certo === len) || (errado === 6); i++){
 }
 */
 
-const letras = 'QWERTYUIOPASDFGHJKLÇZXCVBNM ';
-const teclado = document.getElementById('teclado');
-for (let l of letras){
-    if (l === ' ') {
-        const espaço = document.createElement('button');
-    espaço.setAttribute('id', 'espaço');
-    espaço.textContent = 'ESPAÇO';
-    teclado.appendChild(espaço);
-    } else{ 
+const letras1 = 'QWERTYUIOP';
+const letras2 = 'ASDFGHJKLÇ';
+const letras3 = 'ZZXCVBNM';
+const teclado1 = document.getElementById('fila1');
+const teclado2 = document.getElementById('fila2');
+const teclado3 = document.getElementById('fila3');
+for (let l of letras1){
     let botao = document.createElement('button');
     botao.setAttribute('id', l);
     botao.textContent = l;
-    teclado.appendChild(botao);}
+    teclado1.appendChild(botao);
+}
+for (let l of letras2){
+    let botao = document.createElement('button');
+    botao.setAttribute('id', l);
+    botao.textContent = l;
+    teclado2.appendChild(botao);
+}for (let l of letras3){
+    let botao = document.createElement('button');
+    botao.setAttribute('id', l);
+    botao.textContent = l;
+    teclado3.appendChild(botao);
 }
 

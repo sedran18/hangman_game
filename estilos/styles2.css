@@ -3,52 +3,104 @@
     background: #3c096c;
     display: grid;
     padding: 3vh 4vw;
-    grid-template-rows: 5% 50% 10% 30%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns:minmax(auto, 100%);
+    overflow-x: hidden;
 
 }
+
 .child2 {
     justify-self: end;
     color: yellow;
+    font-size: 0.7rem;
+    word-break: break-word;
 }
+
+
 .child2 i {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .cima {
     width: 100%;
+    max-height: 40vh;
     display: flex;
     justify-content: center;
     padding: 1%;
     margin-bottom: 3px;
 }
+.cima img {
+    max-width: 70%;
+    height: 100%;
+}
 .word {
+    line-height: 4vh;
+    font-size: clamp(1.2rem, 5vw, 2rem);
     color: yellow;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
 
 }
-.teclado {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 8px;
-    padding: 10px;
-    justify-items: center;
+
+
+.fila {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
 }
+
+
+.teclado {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
 
 .teclado button {
-    padding: 10px;
-    border: none;
+    padding: 7%;
     background-color: #f20089;
     color: white;
     border-radius: 8px;
-    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+}
+.espaço {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 3.8vh;
 }
 
 .teclado button:hover {
     background-color: #f18f1f;
     transform: scale(1.1);
+}
+@media (max-width: 675px) {
+    .child2 {
+    justify-self: end;
+    color: yellow;
+    font-size: 0.6rem;
+    word-break: break-word;
+}
+
+
+.child2 i {
+    font-size: 1rem;
+}
+.teclado button {
+    padding: 2%;
+    background-color: #f20089;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.espaço {
+    width: 30vw;
+}
 }
