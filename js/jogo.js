@@ -92,6 +92,7 @@ function criarTeclado(letras, container) {
         botao.textContent = l;
         botao.addEventListener('click', () => {
             somClick.play();
+            botao.style.backgroundColor = '#f18701';
             botao.disabled = true; 
             if (!verifyEnd) {
             atualizarPalavra(l);
