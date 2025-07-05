@@ -5,14 +5,16 @@ if(localStorage.getItem('pontoAtualizado') !== null) {
     pontos.innerText = pontoAtualizado <= 9 ?`0${pontoAtualizado}`: pontoAtualizado;
 
 }
+const somClick = new Audio('audios/mouse-click-290204.mp3');
 
 let arrPrincipal = []
 
 const frutas = document.getElementById('frutas');
 
-frutas.addEventListener('click', () => {
-    event.preventDefault();
-    arrPrincipal = [
+frutas.addEventListener('click', (event) => {
+  event.preventDefault();
+  somClick.play();
+  arrPrincipal = [
   'ABACATE', 'ABACAXI', 'ACEROLA', 'AMEIXA', 'BANANA', 'CAJU',
   'CARAMBOLA', 'CEREJA', 'COCO', 'DAMASCO', 'FIGO', 'FRAMBOESA',
   'GOIABA', 'GRAVIOLA', 'JABUTICABA', 'JACA', 'KIWI', 'LARANJA',
@@ -21,12 +23,13 @@ frutas.addEventListener('click', () => {
   'PITANGA', 'ROMA', 'TAMARINDO', 'UVA'
 ];
     localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
-    window.location.href = 'jogo.html';
+    setTimeout(() => {window.location.href = 'jogo.html';}, 300);
 })
 const animais = document.querySelector('#animais');
-animais.addEventListener('click', () => {
-    event.preventDefault();
-    arrPrincipal = ['CACHORRO', 'GATO', 'ELEFANTE', 'LEAO', 'TIGRE', 'MACACO',
+animais.addEventListener('click', (event) => {
+  event.preventDefault();
+  somClick.play();
+  arrPrincipal = ['CACHORRO', 'GATO', 'ELEFANTE', 'LEAO', 'TIGRE', 'MACACO',
   'GIRAFA', 'HIPOPOTAMO', 'RINOCERONTE', 'ZEBRA', 'CAMELO',
   'CAVALO', 'VACA', 'PORCO', 'OVELHA', 'COELHO', 'URSO',
   'LOBO', 'RAPOSA', 'TAMANDUA', 'JACARE', 'CROCODILO',
@@ -35,13 +38,14 @@ animais.addEventListener('click', () => {
   'MORCEGO', 'ESQUILO', 'ONCA', 'ARANHA', 'ESCORPIAO'
 ];
     localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
-    window.location.href = 'jogo.html';
+    setTimeout(() => {window.location.href = 'jogo.html';}, 300);
 })
 const paises = document.querySelector('#paises');
 
-paises.addEventListener('click', () => {
-    event.preventDefault();
-    arrPrincipal = [
+paises.addEventListener('click', (event) => {
+  event.preventDefault();
+  somClick.play();
+  arrPrincipal = [
   'BRASIL', 'ARGENTINA', 'BOLIVIA', 'CHILE', 'COLOMBIA', 'EQUADOR',
   'PARAGUAI', 'PERU', 'URUGUAI', 'VENEZUELA', 'ESTADOS UNIDOS',
   'CANADA', 'MEXICO', 'ALEMANHA', 'FRANÇA', 'ESPANHA', 'PORTUGAL',
@@ -50,5 +54,11 @@ paises.addEventListener('click', () => {
   'AFRICA DO SUL', 'ANGOLA', 'EGITO', 'MARROCOS', 'NIGERIA'
 ];
     localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
-    window.location.href = 'jogo.html';
+    setTimeout(() => {window.location.href = 'jogo.html';}, 300);
+})
+const personalizado = document.getElementById('personalizado');
+personalizado.addEventListener('click', (event) => {
+  event.preventDefault();
+  somClick.play()
+  setTimeout(() => {window.location.href = 'personalizado.html';}, 300);
 })

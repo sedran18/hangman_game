@@ -60,22 +60,28 @@ function atualizarPalavra(letra) {
     
 
 }
-
+let verifyEnd = false;
 function checarFimDeJogo() {
     if (!exibicao.includes('_')) {
+        const somGanhou = new Audio('audios/correct-6033.mp3');
+        somGanhou.play();
+        verifyEnd = true;
+        setTimeout(()=> {
         alert('Parabéns, você venceu!');
-        
         let pontoAtualizado = parseInt(pontos.textContent) + 1;
         pontos.textContent = pontoAtualizado <= 9 ?`0${pontoAtualizado}`: pontoAtualizado;
         localStorage.setItem('pontoAtualizado', JSON.stringify(pontoAtualizado));
-        setTimeout(() => {
-            window.location = href='index.html'
-}, 5000);
+    }, 300)
     } else if (errado === 6) {
+        const somPerdeu = new Audio('audios/wrong-buzzer-6268.mp3');
+        somPerdeu.play();
+        verifyEnd = true;
+        setTimeout(()=> {
         alert(`Você perdeu! A palavra era: ${randomWord}`);
-        location.href='index.html'
+    }, 300)
     }
 }
+const somClick = new Audio('audios/mouse-click-290204.mp3');
 
 function criarTeclado(letras, container) {
     for (let l of letras) {
@@ -83,8 +89,11 @@ function criarTeclado(letras, container) {
         botao.setAttribute('id', l);
         botao.textContent = l;
         botao.addEventListener('click', () => {
+            somClick.play();
             botao.disabled = true; 
+            if (verifyEnd === false) {
             atualizarPalavra(l);
+            }
         });
         container.appendChild(botao);
     }
