@@ -1,4 +1,4 @@
-
+const somClick = new Audio('audios/mouse-click-290204.mp3');
 const botao = document.getElementById('playPersonalizado');
 const input = document.getElementById('input');
 
@@ -10,8 +10,10 @@ botao.addEventListener('click', () => {
         alert('ESCREVA SOMENTE CARACTERES ALFABÉTICOS SEM QUALQUER TIPO DE ACENTO(LIMITE 25 CARACTERES)');
         input.value = '';
     } else {
+        somClick.play();
+        setTimeout(()=> {
         const arrPrincipal = [texto];
         localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
-        window.location.href = 'jogo.html';
+        window.location.href = 'jogo.html';}, 300);
     }
 });
