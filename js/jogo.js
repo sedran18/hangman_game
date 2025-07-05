@@ -68,7 +68,7 @@ function checarFimDeJogo() {
         verifyEnd = true;
         setTimeout(()=> {
         alert('Parabéns, você venceu!');
-        if (len !== 1) {
+        if (len > 1) {
         let pontoAtualizado = parseInt(pontos.textContent) + 1;
         pontos.textContent = pontoAtualizado <= 9 ?`0${pontoAtualizado}`: pontoAtualizado;
         localStorage.setItem('pontoAtualizado', JSON.stringify(pontoAtualizado));
@@ -93,7 +93,7 @@ function criarTeclado(letras, container) {
         botao.addEventListener('click', () => {
             somClick.play();
             botao.disabled = true; 
-            if (verifyEnd === false) {
+            if (!verifyEnd) {
             atualizarPalavra(l);
             }
         });
