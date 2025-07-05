@@ -68,9 +68,11 @@ function checarFimDeJogo() {
         verifyEnd = true;
         setTimeout(()=> {
         alert('Parabéns, você venceu!');
+        if (len !== 1) {
         let pontoAtualizado = parseInt(pontos.textContent) + 1;
         pontos.textContent = pontoAtualizado <= 9 ?`0${pontoAtualizado}`: pontoAtualizado;
         localStorage.setItem('pontoAtualizado', JSON.stringify(pontoAtualizado));
+        }
     }, 300)
     } else if (errado === 6) {
         const somPerdeu = new Audio('audios/wrong-buzzer-6268.mp3');
