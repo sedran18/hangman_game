@@ -18,10 +18,10 @@ frutas.addEventListener('click', (event) => {
   'ABACATE', 'ABACAXI', 'ACEROLA', 'AMEIXA', 'BANANA', 'CAJU',
   'CARAMBOLA', 'CEREJA', 'COCO', 'DAMASCO', 'FIGO', 'FRAMBOESA',
   'GOIABA', 'GRAVIOLA', 'JABUTICABA', 'JACA', 'KIWI', 'LARANJA',
-  'LIMA', 'LIMAO', 'MACA', 'MANGA', 'MARACUJA',
+  'LIMA', 'LIMAO', 'MAÇA', 'MANGA', 'MARACUJA',
   'MELANCIA', 'MELAO', 'MORANGO', 'NECTARINA', 'PERA', 'PESSEGO',
   'PITANGA', 'ROMA', 'TAMARINDO', 'UVA', 'CACAU', 'GUARANA',
-  'ACAI', 'BABAÇU', 'AMORA', 'CAQUI', 'FIGO DA INDIA'
+  'AÇAI', 'BABAÇU', 'AMORA', 'CAQUI', 'FIGO DA INDIA'
 ];
 
     localStorage.setItem('arrPrincipal', JSON.stringify(arrPrincipal));
